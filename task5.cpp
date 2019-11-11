@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main()
     scanf("%d", &age);
     
     // man or woman
-    printf("Are you a man or woman? (M/w):");
+    printf("Are you a man or woman? (M/w): ");
     scanf(" %c", &ans);
     gender = !((ans | LETTER_SIZE_BIT) == 'w');
     while(getchar() != '\n');
@@ -37,7 +38,7 @@ int main()
     scanf("%s", address);
     
     // married
-    printf("Are you married? (Y/n):");
+    printf("Are you married? (Y/n): ");
     scanf(" %c", &ans);
     married = !((ans | LETTER_SIZE_BIT) == 'n');
     while(getchar() != '\n');
@@ -54,5 +55,6 @@ int main()
     printf("Married: %s\n", (married? "Yes":"No"));
     printf("Height: %.2fm\n", height);
 
+	getch();
     return 0;
 }

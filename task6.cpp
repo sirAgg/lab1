@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 
 int main()
 {
@@ -26,5 +27,6 @@ int main()
         prime_candidate += 2;
     }
 
+	getch();
     return 0;
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 
 int main()
 {
@@ -9,14 +10,15 @@ int main()
     if (input_num < 0)
     {
         std::cout << "Error! Input cannot be negative." << std::endl;
-        return 0;
     }
+	else 
+	{
+		for (int i = -input_num; i <= input_num; i++)
+			std::cout << abs(i) << ' ';
 
-    for (int i=-input_num; i <= input_num; i++)
-        std::cout << abs(i) << ' ';
-
-    std::cout << std::endl;
+		std::cout << std::endl;
+	}
     
-
+	getch();
     return 0;
 }

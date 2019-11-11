@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 
 int main()
 {
@@ -27,6 +28,6 @@ int main()
     } while (i<=N);
 
 
-    std::cout << "hello again" << std::endl;
+	getch();
     return 0;
 }

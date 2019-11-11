@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <conio.h>
 
 using namespace std;
 
@@ -23,7 +25,7 @@ int main()
     cin >> age;
     
     // man or woman
-    cout << "Are you a man or woman? (M/w):";
+    cout << "Are you a man or woman? (M/w): ";
     string ans;
     cin >> ans;
     gender = !((ans[0] | LETTER_SIZE_BIT) == 'w');
@@ -33,7 +35,7 @@ int main()
     cin >> address;
     
     // married
-    cout << "Are you married? (Y/n):";
+    cout << "Are you married? (Y/n): ";
     cin >> ans;
     married = !((ans[0] | LETTER_SIZE_BIT) == 'n');
 
@@ -48,6 +50,7 @@ int main()
     cout << "Address: " << address << endl;
     cout << "Married: " << ((married)?"Yes":"No") << endl;
     cout << "Height: " << height << "m" << endl;
-
+	
+	getch();
     return 0;
 }

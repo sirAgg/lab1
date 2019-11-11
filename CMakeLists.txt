@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 2.0 )
+cmake_minimum_required( VERSION 3.0 )
 
 set(CMAKE_CXX_FLAGS "-g")
 
@@ -19,3 +19,4 @@ add_executable( task7 task7.cpp )
 
 project(task8)
 add_executable( task8 task8.cpp )
+
