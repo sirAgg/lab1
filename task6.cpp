@@ -1,5 +1,7 @@
 #include <iostream>
-#include <conio.h>
+#if _WIN32
+    #include <conio.h>
+#endif
 
 int main()
 {
@@ -27,6 +29,8 @@ int main()
         prime_candidate += 2;
     }
 
+#if _WIN32
 	getch();
+#endif
     return 0;
 }

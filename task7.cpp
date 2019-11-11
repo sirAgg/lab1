@@ -1,5 +1,7 @@
 #include <iostream>
-#include <conio.h>
+#if _WIN32
+    #include <conio.h>
+#endif
 
 int main()
 {
@@ -19,6 +21,8 @@ int main()
 		std::cout << std::endl;
 	}
     
+#if _WIN32
 	getch();
+#endif
     return 0;
 }

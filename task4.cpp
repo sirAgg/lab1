@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
-#include <conio.h>
+#if _WIN32
+    #include <conio.h>
+#endif
 
 using namespace std;
 
@@ -51,6 +53,8 @@ int main()
     cout << "Married: " << ((married)?"Yes":"No") << endl;
     cout << "Height: " << height << "m" << endl;
 	
+#if _WIN32
 	getch();
+#endif
     return 0;
 }

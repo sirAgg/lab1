@@ -1,5 +1,7 @@
 #include <iostream>
-#include <conio.h>
+#if _WIN32
+    #include <conio.h>
+#endif
 
 using namespace std;
 
@@ -55,6 +57,8 @@ int main()
     printf("Married: %s\n", (married? "Yes":"No"));
     printf("Height: %.2fm\n", height);
 
+#if _WIN32
 	getch();
+#endif
     return 0;
 }
