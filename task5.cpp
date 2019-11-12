@@ -1,21 +1,24 @@
-#include <iostream>
+#include <stdio.h>
 #if _WIN32
     #include <conio.h>
 #endif
 
-using namespace std;
+// for converting number macro to string macro
+#define STR(s) _STR(s)
+#define _STR(s) #s
+
+
+#define STRING_SIZE 99
 
 int main()
 {
     // bit that determens if a ascii letter is small or big
     const char LETTER_SIZE_BIT = 1 << 5; 
 
-    const int STRING_SIZE = 100;
-
-    char name[STRING_SIZE];
+    char name[STRING_SIZE+1];
     int age;
     char gender; // male true, female false
-    char address[STRING_SIZE];
+    char address[STRING_SIZE+1];
     char married;
     float height;
 
@@ -23,11 +26,13 @@ int main()
 
     // name
     printf("What's your name: ");
-    scanf("%s", name);
+    scanf(" %" STR(STRING_SIZE) "s", name);
+    while(getchar() != '\n');
  
     // age
     printf("What's your age: ");
-    scanf("%d", &age);
+    scanf(" %d", &age);
+    while(getchar() != '\n');
     
     // man or woman
     printf("Are you a man or woman? (M/w): ");
@@ -37,7 +42,8 @@ int main()
     
     // address
     printf("What's your address: ");
-    scanf("%s", address);
+    scanf(" %" STR(STRING_SIZE) "s", address);
+    while(getchar() != '\n');
     
     // married
     printf("Are you married? (Y/n): ");
@@ -47,8 +53,8 @@ int main()
 
     // address
     printf("What's your height: ");
-    scanf("%f", &height);
-
+    scanf(" %f", &height);
+    while(getchar() != '\n');
 
     printf("\nName: %s\n",name);
     printf("Age: %d\n",age);
