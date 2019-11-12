@@ -19,4 +19,4 @@
     in c and c++ I'm not the right person to ask this question.
 
 --------------------
-In total I spent about 3-4 hours on this lab.
+In total I spent about 4-5 hours on this lab.
