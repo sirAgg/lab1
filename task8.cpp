@@ -40,7 +40,6 @@ int main()
     }
     else{
         printf("Error! Invalid input.\n");
-        return 0;
     }
 
     

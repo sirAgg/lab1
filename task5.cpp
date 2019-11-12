@@ -17,9 +17,9 @@ int main()
 
     char name[STRING_SIZE+1];
     int age;
-    char gender; // male true, female false
+    char gender; // male 1, female 0
     char address[STRING_SIZE+1];
-    char married;
+    char married; // yes 1, no 0
     float height;
 
     char ans;
@@ -27,7 +27,7 @@ int main()
     // name
     printf("What's your name: ");
     scanf(" %" STR(STRING_SIZE) "s", name);
-    while(getchar() != '\n');
+    while(getchar() != '\n');	// clears stdin if the entire input wasn't read.
  
     // age
     printf("What's your age: ");
