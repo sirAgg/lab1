@@ -18,6 +18,8 @@ int main()
     bool married;
     float height;
 
+    string ans;
+
     // name
     cout << "What's your name: ";
     cin >> name;
@@ -28,7 +30,6 @@ int main()
     
     // man or woman
     cout << "Are you a man or woman? (M/w): ";
-    string ans;
     cin >> ans;
     gender = !((ans[0] | LETTER_SIZE_BIT) == 'w');
     
